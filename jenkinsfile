@@ -18,7 +18,8 @@ pipeline{
        }
      stage('deploy phase'){
          steps{
-            echo 'deploy information'
+            img= 'image_name'
+            docker.image("$image_name").run('--name container1 -d -p 80:80')
           }
        }
     }
